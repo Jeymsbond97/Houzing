@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet, useNavigate} from 'react-router-dom'
-import { Container, Link, Logo, Section, Wrapper } from "./style";
+import { Container, Link, Logo, Main, Section, Wrapper } from "./style";
 
 import logoImg from '../../assets/image/logo.png'
 import { navbar } from "../../utils/navbar";
@@ -9,8 +9,8 @@ const Navbar =()=>{
     const navigate = useNavigate()
     return (
         <Container>
-           
-            <Wrapper>
+            <Main>
+             <Wrapper>
                 <Section onClick={()=>navigate('/home')} logo>
                     <Logo src={logoImg}/><h3>Houzing</h3>
                 </Section>
@@ -24,7 +24,8 @@ const Navbar =()=>{
                 <Section>
                     <button>Sing In</button>
                 </Section>
-            </Wrapper>
+             </Wrapper>
+            </Main>
             <Outlet/>
         </Container>
     )
