@@ -2,7 +2,7 @@
 
 This project is available on github bootstrapped with [Houzing](https://github.com/Jeymsbond97/Houzing).
 
-# you can see the DEMO [Houzing] (https://netlify.com/AminjonovTokhirbek/Houzing)
+# you can see the DEMO [Houzing] (https://houzing-react-app.netlify.app/)
 
 ## Available Scripts
 
