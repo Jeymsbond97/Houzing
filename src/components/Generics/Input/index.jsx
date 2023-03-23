@@ -9,10 +9,12 @@ export const Input = ({
   value,
   defaultValue,
   width,
-  height
+  height,
+  icon
 }) => {
   return (
     <Container
+      icon= {icon}
       defaultValue={defaultValue}
       value={value}
       name={name}

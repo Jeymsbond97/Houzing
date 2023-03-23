@@ -5,6 +5,7 @@ import { Container, Link, Logo, Main, Section, Wrapper } from "./style";
 import logoImg from '../../assets/image/logo.png'
 import { navbar } from "../../utils/navbar";
 import { Button } from "../Generics/Button";
+import Filter from "../Filter";
 
 const Navbar =()=>{
     const navigate = useNavigate()
@@ -31,6 +32,7 @@ const Navbar =()=>{
                 </Section>
              </Wrapper>
             </Main>
+            <Filter/>
             <Outlet/>
         </Container>
     )

@@ -37,6 +37,7 @@ export const Container = styled.input`
    border-radius: 2px;
    min-width: 120px;
    font-size: 14px;
+   padding-left: ${({icon})=> (icon ? '50px' : '20px')};
 
    outline: none;
    border: 1px solid #e3e9ec;
