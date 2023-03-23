@@ -4,6 +4,7 @@ import { Container, Link, Logo, Main, Section, Wrapper } from "./style";
 
 import logoImg from '../../assets/image/logo.png'
 import { navbar } from "../../utils/navbar";
+import { Button } from "../Generics/Button";
 
 const Navbar =()=>{
     const navigate = useNavigate()
@@ -16,13 +17,17 @@ const Navbar =()=>{
                 </Section>
                 <Section>
                     {
-                        navbar.map(({title, path}, index)=>{
-                            return <Link className={({isActive})=> isActive && 'active'} key={index} to={path}>{title}</Link>
+                        navbar.map(({title, path, hidden}, index)=>{
+                            return (
+                                !hidden && (
+                                    <Link className={({isActive})=> isActive && 'active'} key={index} to={path}>{title}</Link>
+                                )
+                            )
                         })
                     }
                 </Section>
                 <Section>
-                    <button>Sing In</button>
+                  <Button onClick={()=> navigate('/signIn')} type={'dark'} >Sign In</Button>
                 </Section>
              </Wrapper>
             </Main>
